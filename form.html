@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sub(){
+            
+            let a = document.getElementById("name").value;
+            let b = document.getElementById("email").value;
+            let c = document.getElementById("password").value;
+            let d = document.getElementById("confirmpassword").value;
+            let e = document.getElementById("number").value;
+            if(a=="" || b==""|| c=="" || d=="" || e==""){
+                alert("please fill all the fields");
+                return false;
+            }
+            // password limit
+            else if(c.length>8 || c.length<8){
+                alert("password should be 8 characters long");
+            }
+            // confirm password
+            else if(c!=d){
+                alert("please enter same password");
+            }
+            else if(isNaN(e)){
+            alert("please enter only numbers");
+            }
+            else{
+                 true;
+            }
+        }
+    </script>
+    <form action="redirect.html" onsubmit="return sub()">
+        <label for="">Name:</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="">Email:</label>
+        <input type="text" name="email" id="email">
+        <br>
+        <label for="">Password:</label>
+        <input type="password" name="password" id="password">
+        <br>
+        <label for="">Confirm Password:</label>
+        <input type="password" name="confirmpassword" id="confirmpassword"></label>
+        <br>
+        <label for="">Gender:</label>
+        <br>
+        <input type="radio" name="gender" id="male">Male
+        <input type="radio" name="gender" id="female">Female
+        <br>
+        <label for="">number</label>
+        <input type="text" name="number" id="number">
+        <br>
+        <input type="submit" name="Submit" value="Submit">
+    
+    <!-- <input type="submit" value="Submit" onclick="sub()" > -->
+    </form>
+
+</body>
+</html>

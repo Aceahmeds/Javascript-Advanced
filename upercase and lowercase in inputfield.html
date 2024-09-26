@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function upercase(){  
+           let e = document.getElementById("name");
+            e.value = e.value.toUpperCase();
+                }
+        function lowercase(){
+            let es = document.getElementById("email");
+            es.value = es.value.toLowerCase();
+        }      
+
+    </script>
+<label for="">Name</label>
+    <input type="text" id="name" onblur="upercase()">
+    <br>
+<label for="">Email</label>
+    <input type="text" id="email" onblur="lowercase()">
+</body>
+</html>
